@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalogo De Productos.</title>
+     <link rel="stylesheet" href="./css/estilopro.css" />
+	<style type="text/css" media="screen">@import url('./css/style.css');</style>
+	
+    <meta charset="UTF8">
+
+		
+<script type="text/javascript" language="javascript" src="menu/js/dbs.js"></script>
+	<script type="text/javascript" language="javascript" src="menu/js/buscador.js"></script>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+		  //inicialmente ocultamos los dropdown del menu
+			//We initially hide the all dropdown menus
+			$('#dropdown_nav li').find('.sub_nav').hide();
+              
+			//When hovering over the main nav link we find the dropdown menu to the corresponding link.
+			$('#dropdown_nav li').hover(function() {
+				//Find a child of 'this' with a class of .sub_nav and make the beauty fadeIn.
+				$(this).find('.sub_nav').fadeIn(100);
+			}, function() {
+			   // hase lo mismo otra ves desparese esta ves.
+				//Do the same again, only fadeOut this time.
+				$(this).find('.sub_nav').fadeOut(50);
+			});
+		});
+	</script>	
+	
+	
+	
+	
+</head>
+<body>
+	<div id="container">
+    
+      
+<ul id="dropdown_nav">
+		<li><a class="first" href="../index.html">Inicio</a></li>
+		<li><a href="#">Productos</a>
+			<ul class="sub_nav">
+				<li><a href=" ./menu/blackberry.html  ">blackberry1</a></li>
+				<li><a href="./menu/laptops.html">Laptops</a></li>
+				<li><a href="./menu/tablets.html">Tablets</a></li>
+				<li><a href="./menu/iphone.html">Iphones</a></li>
+				<li><a href="./menu/ipods.html">Ipods</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Promociones</a>
+			<ul class="sub_nav">
+				
+				<li><a href="./menu/promociones.html">Promociones especiales</a></li>
+				<li><a href="./menu/pedido.html">Pedidos personalizados</a></li>
+				
+			</ul>
+		</li>
+		<li><a href="./menu/contactos.html">Contactos</a>
+		</li>
+		<li><a class="last" href="#">Redes sociales</a>
+			<ul class="sub_nav">
+				<li><a href="https://www.facebook.com/">facebook</a></li>
+				<li><a href="https://twitter.com/">twitter</a></li>
+				<li><a href="http://www.youtube.com/">youtube</a></li>
+				<li><a href="https://www.tumblr.com/">tumblr</a></li>
+			</ul>
+			
+		</li>
+		<li><form name="FormularioBusqueda" class="formulariodemo cf" >
+<input type="text" name="palabra" size="20">
+<input type="hidden" name="pagina" value="0">
+<input type="button" class="button" value="Buscar" name="buscar" onClick="IniciaBuscador(this.form.palabra.value, this.form.pagina.value, 0)">
+</form>
+</li>
+	</ul><br />	  
+	  
+	  
+	  
+	<div id="contents">
+		<h2>PROMOCI&Oacute;N DEL MES DE NOVIEMBRE:</h2>
+        <img src="./imagenes/promo.jpg"/>
+	<figcaption>Aprovecha solo por este mes al comprar cualquiera de nuestras IPODS y recibe completamente GRATIS UN PAR DE AUDIFONOS MARCA BEATS PARA QUE DISFRUTES DE TODA TU M&Uacute;SICA.</figcaption>		
+	</div>
+    </div>
+	
+	
+	
+</body>
+</html>
+

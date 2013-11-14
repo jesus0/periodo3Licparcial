@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalogo De Productos.</title>                              
+    <link rel="stylesheet" href="./css/estilo.css" />
+	
+	<style type="text/css" media="screen">@import url('./css/style.css');</style>
+	<style type="text/css">
+    #contadorusu{
+	            text-align: center;
+				margin-top: 490px;
+				background-color: skyblue;
+				color:red;
+				width:67%;
+				margin-left:140px;
+				}
+	</style>
+	
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<script type="text/javascript" language="javascript" src="menu/js/dbs.js"></script>
+	<script type="text/javascript" language="javascript" src="menu/js/buscador.js"></script>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+		  //inicialmente ocultamos los dropdown del menu
+			$('#dropdown_nav li').find('.sub_nav').hide();
+			//hace la accion de bajar las ventanas desplegables con sus links correspondientes
+			$('#dropdown_nav li').hover(function() {
+			    //Encuentra un hijo con "this" con la clase del .sub_nav
+				$(this).find('.sub_nav').fadeIn(100);
+			}, function() {
+			   // hase lo mismo otra ves desparese esta ves.
+				$(this).find('.sub_nav').fadeOut(50);
+			});
+		});
+	</script>	
+</head>
+<body>
+	<div id="container">
+	<ul id="dropdown_nav">
+		<li><a class="first" href="#">Inicio</a></li>
+		<li><a href="#">Productos</a>
+			<ul class="sub_nav">
+				<li><a href=" ./menu/blackberry.html  ">blackberry</a></li>
+				<li><a href="./menu/laptops.html">Laptops</a></li>
+				<li><a href="./menu/tablets.html">Tablets</a></li>
+				<li><a href="./menu/iphone.html">Iphones</a></li>
+				<li><a href="./menu/ipods.html">Ipods</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Promociones</a>
+			<ul class="sub_nav">				
+				<li><a href="./menu/promociones.html">Promociones especiales</a></li>
+				<li><a href="./menu/productos_nuevos.html">Nuevos Productos</a></li>				
+			</ul>
+		</li>
+		<li><a href="./menu/contactos.html">Contactos</a>
+		</li>
+		<li><a class="last" href="#">Redes sociales</a>
+			<ul class="sub_nav">
+				<li><a href="https://www.facebook.com/">facebook</a></li>
+				<li><a href="https://twitter.com/">twitter</a></li>
+				<li><a href="http://www.youtube.com/">youtube</a></li>
+				<li><a href="https://www.tumblr.com/">tumblr</a></li>
+			</ul>			
+		</li>
+		<li><form name="FormularioBusqueda" class="formulariodemo cf" >
+<input type="text" name="palabra" size="20">
+<input type="hidden" name="pagina" value="0">
+<input type="button" class="button" value="Buscar" name="buscar" onClick="IniciaBuscador(this.form.palabra.value, this.form.pagina.value, 0)">
+</form>
+</li>
+	</ul><br />     
+	<div id="contents">
+		<h2>BIENVENIDO A:</h2>
+        <img src="./imagenes/inicio.jpg"/>
+			<figcaption>En esta p&aacute;gina podras en contrar una gran variedad de los mejores 
+			articulos informaticos del momento y sobre todo al mejor precio del mercado. </figcaption>
+	</div>
+	<div id="contadorusu">
+	        <script type="text/javascript">
+if(localStorage.pagecount){localStorage.pagecount=Number(localStorage.pagecount)+1;} else{localStorage.pagecount=1;}
+document.write("Grasias Usuario Has Visitado Nuestro Sitio: "+localStorage.pagecount+" Veces");
+</script>
+</div>
+    </div>	
+</body>
+</html>
+

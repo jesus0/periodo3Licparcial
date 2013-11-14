@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalogo De Productos.</title>
+     <link rel="stylesheet" href="css/estilo1.css" />
+     <script src="js/jquery.js"></script>
+	 <style>
+	 
+	 li{
+	 color:white;
+	 }
+	 
+	 h2{
+	 color:skyblue;
+	 }
+	 
+	 </style>
+    <meta charset="UTF8">		
+	<script>
+		var imagen = new Array();
+		imagen[0] = "imagenes/telefono.jpg";
+		imagen[1] = "imagenes/tablet.jpg";
+		imagen[2] = "imagenes/nokia.jpg";
+
+$(document).ready(function(){
+	setInterval(NextSlider, 5000);
+$("#opentel").attr("src", imagen[0]);
+$("#opentab").attr("src", imagen[1]);
+$("#opennok").attr("src", imagen[2]);
+	  $('#opentel').click(function(){
+        $('#popup').fadeIn('slow');
+    });
+    $('#close').click(function(){
+        $('#popup').fadeOut('slow');
+    });
+		
+	$('#opentab').click(function(){
+        $('#popup2').fadeIn('slow');
+    });
+    $('#close2').click(function(){
+        $('#popup2').fadeOut('slow');
+    });
+	
+	$('#opennok').click(function(){
+        $('#popup3').fadeIn('slow');
+    });
+    $('#close3').click(function(){
+        $('#popup3').fadeOut('slow');
+    });
+    
+$('#menu').lksMenu(); 
+	});
+var i=0;
+function NextSlider() {
+	if ( i < 3 ){
+	
+	$('#imgslider').attr("src", imagen[i]);
+	$('#imgslider').slideDown('slow');
+	i = 1+i;
+	if ( i == 3 ){
+	i = 0;
+	}
+	}
+
+}
+		</script>	
+</head>
+<body>   
+<a href="../index.html"><img src="imagenes/icono.jpg" width="40" height="40"  /></a>		
+<section id="articulos">
+		<h2>ESTOS SON LOS NUEVOS PRODUCTOS QUE OFRECEREMOS PARA TI:</h2>
+		<ul id="listaArticulos">
+			<li id="tel"><img href="#" id="opentel" ></img>Galaxy S 4<br>Smartphone<br>ITEM: 492263<br><h1 id=precio>$ 600</h1></li>
+			<li id="tab"><img href="#" id="opentab" ></img>Galaxy Tab 3<br>Tablet<br>ITEM: 481811<br><h1 id=precio>$ 350</h1></li>
+			<li id="nok"><img href="#" id="opennok" ></img><br>Nokia Lumia 620<br>Smartphone<br>ITEM: 413470<br><h1 id=precio>$ 250</h1></li>
+		</ul>
+<div id="popup" style="display: none;">
+    <div class="content-popup" >
+	<table>
+		<tr>
+			<td> <img id="telefono" src="imagenes/telefono.jpg"></img></td>
+			<td>
+			<p>El Samsung Galaxy S 4 es la cuarta entrega de la serie Galaxy S, esta vez con una pantalla de 4.99 pulgadas Full HD Super AMOLED y 441ppi, c&aacute;mara trasera de 13 megapixels, c&aacute;mara frontal de 2 megapixels, 2GB de RAM, procesador Exynos 5 Octa para la versi&oacute;n 3G o Snapdragon 600 para la versi&oacute;n LTE, 16GB/32GB/64GB de almacenamiento interno.</p>			
+				<ul id="detalle">
+					<li>Modelo:	 Galaxy S 4</li>
+					<li>Existencias Disponibles:  0</li>
+					<li>Marca:  Samsung</li> 
+				</ul>
+			 </td>
+		</tr>
+	</table>
+        <div class="close"><a href="#" id="close">cerrar</a></div>
+    </div>
+</div>
+<div id="popup2" style="display: none;">
+    <div class="content-popup" >
+	<table>
+		<tr>
+			<td> <img id="tablet" src="imagenes/tablet.jpg"></img></td>
+			<td>
+			<p>El Samsung Galaxy Tab 3 es la tercera generaci&oacute;n de tablets Galaxy Tab que adopta el nuevo dise&ntilde;o de Samsung con la tecla de inicio y un par de botones. En cuanto a caracter&iacute;sticas no tiene grandes diferencias, con una pantalla de 7 pulgadas a 1024 x 600 pixels, procesador dual-core a 1.2GHz, 1GB de RAM, 8GB o 16GB de almacenamiento.</p>			
+				<ul id="detalle">
+					<li>Modelo:	Galaxy Tab 3</li>
+					<li>Existencias Disponibles: 0</li>
+					<li>Marca:  Samsung</li>
+				</ul>
+			 </td>
+		</tr>
+	</table>
+        <div class="close"><a href="#" id="close2">cerrar</a></div>
+		
+    </div>
+</div>
+<div id="popup3" style="display: none;">
+    <div class="content-popup" >
+	<table>
+		<tr>
+			<td> <img id="nokia" src="imagenes/nokia.jpg"></img></td>
+			<td>
+			<p>El Nokia Lumia 620 es el smartphone Windows Phone 8 m&aacute;s econ&oacute;mico del fabricante a la fecha. Posee una pantalla ClearBlack TFT LCD de 3.8 pulgadas, c&aacute;mara trasera de 5 megapixels con flash LED, c&aacute;mara frontal VGA, procesador dual-core Snapdragon S4 Plus a 1GHz, 512MB de RAM, 8GB de almacenamiento interno expandible mediante memorias microSD y un cuerpo de policarbonato trasl&uacute;cido de doble color, para dise&ntilde;os m&aacute;s llamativos..</p>			
+				<ul id="detalle">
+					<li>Modelo:	Lumia 620</li>
+					<li>Existencias Disponibles:  No</li>
+					<li>Marca:  Nokia</li>
+				</ul>
+			 </td>
+		</tr>
+	</table>
+        <div class="close"><a href="#" id="close3">cerrar</a></div>	
+</body>
+</html>
+

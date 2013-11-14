@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="js/exprecionesregulares.js"></script>
+</head>
+<style>
+
+h1{
+text-align:center;
+color:red;
+}
+
+body{
+background-image:url("imagenes/woodV.jpg");
+}
+
+fieldset{
+margin-left:340px;
+margin-right:610px;
+margin-top:40px;
+color:blue;
+}
+
+</style>
+
+<body>
+<a href="../index.html"><img src="imagenes/icono.jpg" width="40" height="40"  /></a> 
+
+<h1>Formulario de Contactos.</h1>
+
+<form name="conmen" method="post" action="">
+                   
+                    <fieldset>						                     
+                            
+                                <label for="name">Ocupaci&oacute;n:</label>
+                                <select name="statusflight" id="statusflight" style="width: 180px;">
+                                    <option value="completed_flight">Seleccionar</option>
+                                    <option value="yes">Estudiante.</option>
+                                    <option value="no">Trabajador Profesional.</option>
+									<option value="otros">Otros.</option>
+                                </select>
+                            
+							<br>
+                            
+                                <label for="name">Sexo:</label><br>
+                                <select size="1" id="country" name="sexo" style="width: 124px;">
+                                    
+									<option selected value="">Seleccionar</option>
+                                    <option value="KBL">Masculino</option>
+                                    <option value="TIA">Femenino</option>
+                                    
+                                </select>
+                            
+							<br>
+							
+                                <label for="fname">
+                                    Nombre:</label><br>
+									
+                               <input  id="fname"  type="text"    onkeypress="return soloLetras(event)"/>
+                            
+							<br>
+							
+							    <label for="edad">Edad</label><br>
+							   
+                               <input type="text" name="edad" id="edad"/>								
+							<br>
+							
+                                <label for="apellido">
+                                    Apellidos:</label>
+                                
+								<input id="apellido" type="text" name="apellido"  />
+							
+							<br>
+							
+							    <label for="correo">
+                                    Email:</label><br>
+									
+                                <input id="e-mail" name="email"  type="text"  placeholder="Ejemplocorreo019@yahoo.es"  class="forminput" onclick="validar_correo();" size="30" maxlength="45" />
+                     	
+						    <br>
+							 <label for="DUI">DUI</label><br>
+		                     
+							 <input id="numdui" name="numdui" type="text" placeholder="Numero de DUI sin guiones" required>
+		
+						
+       						<br>
+							
+						    <div class="btnnext">
+                            <a href="usuario.html" onclick="validaciones()"  >Enviar</a></div>
+						<input type="submit" onclick="validaciones()" value="validar">
+					</fieldset>
+                    
+</form>
+</body>
+</html>				
